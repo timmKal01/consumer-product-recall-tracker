@@ -1,0 +1,13 @@
+{
+    "actorSpecification": 1,
+    "name": "consumer-product-recall-tracker",
+    "title": "Consumer Product Recall Tracker — CPSC Recalls",
+    "description": "Search recent CPSC recalls of general consumer products — toys, furniture, appliances, electronics, and more — by keyword, hazard type, or manufacturer/retailer. Official saferproducts.gov data, for retailers, importers, and compliance teams.",
+    "version": "0.1",
+    "meta": {
+        "templateId": "custom-no-proxy"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "dockerfile": "../Dockerfile"
+}

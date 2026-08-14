@@ -1,0 +1,43 @@
+{
+    "title": "Consumer Product Recall Tracker Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "keyword": {
+            "title": "Keyword",
+            "type": "string",
+            "editor": "textfield",
+            "description": "Free-text search across the recall title and product description (e.g. \"stroller\", \"space heater\", \"button battery\"). Leave blank to skip keyword filtering."
+        },
+        "hazard": {
+            "title": "Hazard",
+            "type": "string",
+            "editor": "textfield",
+            "description": "Free-text search across the described hazard (e.g. \"fire\", \"choking\", \"laceration\"). Leave blank to skip hazard filtering."
+        },
+        "manufacturer": {
+            "title": "Manufacturer or brand",
+            "type": "string",
+            "editor": "textfield",
+            "description": "Free-text search across manufacturer/importer/distributor names. Leave blank to skip."
+        },
+        "daysBack": {
+            "title": "Days back",
+            "type": "integer",
+            "editor": "number",
+            "description": "How many days back from today to search, based on the recall's publish date.",
+            "default": 30,
+            "minimum": 1,
+            "maximum": 365
+        },
+        "maxResults": {
+            "title": "Max results",
+            "type": "integer",
+            "editor": "number",
+            "description": "Maximum number of recalls to return, most recent first.",
+            "default": 25,
+            "minimum": 1,
+            "maximum": 100
+        }
+    }
+}
