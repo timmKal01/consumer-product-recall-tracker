@@ -1,0 +1,63 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "recallNumber",
+                    "title",
+                    "recallDate",
+                    "hazards",
+                    "remedies",
+                    "injuries",
+                    "retailers",
+                    "manufacturerCountries",
+                    "url"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "recallNumber": {
+                        "label": "Recall number",
+                        "format": "text"
+                    },
+                    "title": {
+                        "label": "Title",
+                        "format": "text"
+                    },
+                    "recallDate": {
+                        "label": "Recall date",
+                        "format": "date"
+                    },
+                    "hazards": {
+                        "label": "Hazards",
+                        "format": "array"
+                    },
+                    "remedies": {
+                        "label": "Remedies",
+                        "format": "array"
+                    },
+                    "injuries": {
+                        "label": "Injuries",
+                        "format": "array"
+                    },
+                    "retailers": {
+                        "label": "Retailers",
+                        "format": "array"
+                    },
+                    "manufacturerCountries": {
+                        "label": "Manufacturer countries",
+                        "format": "array"
+                    },
+                    "url": {
+                        "label": "URL",
+                        "format": "link"
+                    }
+                }
+            }
+        }
+    }
+}
