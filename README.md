@@ -73,5 +73,5 @@ search returns 0 recalls or 100.
 
 ## Related products
 
-- [Product Recall Alert](https://github.com/timmKal01/product-recall-alert) — the FDA equivalent for drug, food, and medical device recalls
-- [Vehicle Recall Tracker](https://github.com/timmKal01/vehicle-recall-tracker) — the NHTSA equivalent for vehicle safety recalls
+- [FDA Recall Tracker](https://apify.com/m_ctim/product-recall-alert): the FDA equivalent for drug, food, and medical device recalls
+- [Vehicle Recall Lookup by Make, Model & Year](https://apify.com/m_ctim/vehicle-recall-tracker): the NHTSA equivalent for vehicle safety recalls
