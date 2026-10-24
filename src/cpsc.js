@@ -1,5 +1,9 @@
 import { log } from 'apify';
 
+// Some public APIs refuse requests that identify themselves only as Node's default "node" user agent (data.cms.gov
+// started doing so in October 2026), so every request says which tool is asking and where to find it.
+const USER_AGENT = 'consumer-product-recall-tracker/0.1 (+https://apify.com/m_ctim/consumer-product-recall-tracker)';
+
 const BASE_URL = 'https://www.saferproducts.gov/RestWebServices/Recall';
 const REQUEST_TIMEOUT_MS = 30_000;
 const MAX_ATTEMPTS = 4;
@@ -20,7 +24,7 @@ async function fetchWithRetry(url) {
         const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
 
         try {
-            const res = await fetch(url, { headers: { Connection: 'close' }, signal: controller.signal });
+            const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT, Connection: 'close' }, signal: controller.signal });
 
             if (res.status === 429 || res.status >= 500) {
                 const retryAfterHeader = Number(res.headers.get('retry-after'));
